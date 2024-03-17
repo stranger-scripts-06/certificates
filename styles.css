@@ -280,7 +280,7 @@ body {
 
 .button.clicked {
   width: 250px; /* Adjusted width */
-  color: #1b1a1a;
+  color: transparent; /* Make the text transparent (invisible) */
 }
 
 .clicked:after {

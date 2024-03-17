@@ -19,20 +19,59 @@ window.onload = function(){
 
 
     $(document).ready(function() {
-      $(".button").on('click', function() {
-          $(this).addClass("clicked");
+      $(".button").on('click', function(event) {
+          // Prevent the default behavior of the link (i.e., opening the URL in the same window)
+          event.preventDefault();
+  
+          var clickedButton = $(this); // Store the clicked button in a variable
+  
+          // Add classes to the clicked button
+          clickedButton.addClass("clicked");
   
           setTimeout(function() {
-              $(".button").addClass("complete");
+              clickedButton.addClass("complete");
           }, 3000);
           
           setTimeout(function() {
-              $(".button").removeClass("clicked");
+              clickedButton.removeClass("clicked");
           }, 5000);
           
           setTimeout(function() {
-              $(".button").removeClass("complete");
+              clickedButton.removeClass("complete");
           }, 5000);
+  
+          // Event listener for animation end
+          clickedButton.on('animationend', function() {
+              // Get the href attribute of the clicked button's <a> tag
+              var link = clickedButton.attr('href');
+              // Open the link in a new window/tab
+              window.open(link, '_blank');
+          });
       });
   });
+
+  
+  $(document).ready(function() {
+    $(".button").on('click', function(event) {
+        event.preventDefault();
+
+        var clickedButton = $(this);
+        clickedButton.addClass("clicked");
+
+        // Add animation classes and open the link after animation completion
+        setTimeout(function() {
+            clickedButton.addClass("animate-out");
+
+            setTimeout(function() {
+                var link = clickedButton.data('link'); // Retrieve link from data attribute
+                window.open(link, "_blank");
+            }, 3500); // Adjust the timeout duration based on your animation timing
+
+        }, 100);
+    });
+});
+
+
+  
+  
   
