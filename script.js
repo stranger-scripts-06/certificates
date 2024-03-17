@@ -24,15 +24,15 @@ window.onload = function(){
   
           setTimeout(function() {
               $(".button").addClass("complete");
-          }, 5000);
+          }, 3000);
           
           setTimeout(function() {
               $(".button").removeClass("clicked");
-          }, 8000);
+          }, 5000);
           
           setTimeout(function() {
               $(".button").removeClass("complete");
-          }, 8000);
+          }, 5000);
       });
   });
   

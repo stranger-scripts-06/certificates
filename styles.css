@@ -229,6 +229,98 @@ body {
   margin: 10px;
 }
 
+.buttonwrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  width: 120px; /* Reduced width */
+  height: 40px; /* Reduced height */
+  border: none;
+  background: #353434;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 10pt; /* Reduced font size */
+  color: white;
+  cursor: pointer;
+  transition: .5s;
+  border-radius: 5px;
+  outline: none;
+}
+
+.button:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  height: 40px; /* Reduced height */
+  width: 0px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: black;
+  transition: .1s linear;
+  border-radius: 5px;
+}
+
+.button:before {
+  content: url("tick.png");
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  transition: all .4s .4s;
+}
+
+.button:hover {
+  box-shadow: 2px 2px 10px #181818; /* Reduced box-shadow */
+}
+
+.button.clicked {
+  width: 250px; /* Adjusted width */
+  color: #1b1a1a;
+}
+
+.clicked:after {
+  width: 100%;
+  transition: width 2s .4s linear; /* Adjusted transition duration */
+}
+
+.button.complete {
+  width: 45px; /* Reduced width */
+}
+
+.complete:before {
+  content: '';
+  display: initial;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px; /* Adjust as needed */
+  height: 24px; /* Adjust as needed */
+  background-image: url("tick.png"); /* Adjust as needed */
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .btn-download {
   padding: 10px 20px;
   height: 40px;
@@ -265,98 +357,4 @@ body {
 .btn-download:hover {
   background-color: #0056b3;
   color: #fff;
-}
-
-
-
-
-
-
-
-@media (max-width: 768px) {
-  .grid-container {
-    flex-direction: column; /* Stack tiles vertically */
-    align-items: stretch; /* Stretch tiles to full width */
-  }
-
-  .tile {
-    width: 100%; /* Full width for tiles on mobile */
-    margin-bottom: 20px; /* Add space between stacked tiles */
-  }
-}
-
-
-.buttonwrapper {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.button {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 200px;
-	height: 80px;
-	border: none;
-	background: #353434;
-	font-family: 'Julius Sans One', sans-serif;
-	font-size: 15pt;
-	color: white;
-	cursor: pointer;
-	transition: .5s;
-	overflow: hidden;
-	border-radius: 5px;
-	outline: none;
-}
-
-.button:after {
-	content: "";
-	z-index: 1;
-	position: absolute;
-	height: 85px;
-	width: 0px;
-	top: 50%;
-	left: 0;
-  color: white;
-	transform: translateY(-50%);
-	background: black;
-	transition: .1s linear;
-  
-}
-
-.button:before {
-	content: url("tick.png");
-	z-index: 2;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	display: none;
-	transition: all .4s .4s;
-  color: white;
-}
-
-.button:hover {
-	box-shadow: 2px 2px 20px #181818;
-}
-
-.button.clicked {
-	width: 800px;
-	color: #353434;
-}
-
-.clicked:after {
-	width: 100%;
-	transition: width 4s .8s linear;
-}
-
-.button.complete {
-	width: 85px;
-}
-
-.complete:before {
-	display: initial;
 }
