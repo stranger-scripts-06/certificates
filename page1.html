@@ -7,22 +7,31 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>PDF Links</h1>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Link</th>
-        </tr>
-        <tr>
-            <td>Document 1</td>
-            <td><a href="https://digital-vjti.s3.ap-south-1.amazonaws.com/CS50P+Certificate.pdf" target="_blank">Download PDF</a></td>
-        </tr>
-        <tr>
-            <td>Document 2</td>
-            <td><a href="https://your-bucket-name.s3.amazonaws.com/document2.pdf" target="_blank">Download PDF</a></td>
-        </tr>
-        <!-- Add more rows as needed -->
-    </table>
-    <a href="index.html">Back to Gallery</a>
+    <nav class="navbar">
+        <img src="vjti.png" alt="Image 1" class="navbar-img-1" >
+        <img src="digitaltext.png" alt="Image 2" class="large-img-2" >
+        <img src="nexus.png" alt="Image 3" class="navbar-img-3" >
+        <img src="digital.png" alt="Image 4" class="navbar-img-4" >
+    </nav>
+
+    <div class="grid-container">
+        <div class="tile">
+            <div class="name">John Doe</div>
+            <!-- <button class="btn-download">Download Certificate</button> -->
+            <div class="buttonwrapper">
+                <button class="button">DOWNLOAD</div>
+            </div>
+        </div>
+        <div class="tile">
+            <div class="name">Jane Smith</div>
+            <button class="btn-download">Download Certificate</button>
+        </div>
+        <!-- Add more tiles as needed -->
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+    
 </body>
 </html>
