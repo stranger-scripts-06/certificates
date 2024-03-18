@@ -19,7 +19,7 @@ window.onload = function(){
 
 
     $(document).ready(function() {
-      $(".button").on('click', function(event) {
+      $(".buttons").on('click', function(event) {
           // Prevent the default behavior of the link (i.e., opening the URL in the same window)
           event.preventDefault();
   
@@ -52,7 +52,7 @@ window.onload = function(){
 
   
   $(document).ready(function() {
-    $(".button").on('click', function(event) {
+    $(".buttons").on('click', function(event) {
         event.preventDefault();
 
         var clickedButton = $(this);
