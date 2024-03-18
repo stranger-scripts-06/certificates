@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap");
+
 body {
     margin: 0;
     padding: 0;
@@ -266,7 +268,7 @@ body {
 }
 
 .buttons:before {
-  content: url("tick.png");
+  content: url("images/tick.png");
   z-index: 2;
   position: absolute;
   top: 50%;
@@ -303,7 +305,7 @@ body {
   transform: translate(-50%, -50%);
   width: 24px; /* Adjust as needed */
   height: 24px; /* Adjust as needed */
-  background-image: url("tick.png"); /* Adjust as needed */
+  background-image: url("images/tick.png"); /* Adjust as needed */
   background-size: cover;
 }
 
@@ -339,8 +341,8 @@ button {
 }
 
 .slide {
-  --color: #0077b5;
-  --hover: #0077b5;
+    --color: #0077b5;
+    --hover: #0077b5;
 }
 
 button.slide:hover,
@@ -452,5 +454,34 @@ button.slide:active {
   background-color: #0056b3;
   color: #fff;
 }
+
+
+
+
+
+
+svg {
+    font-family: "Lexend Mega", sans-serif;
+    width: 100%; height: 100%;
+}
+svg text {
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #A326FF;
+    font-size: 100px;
+}
+@keyframes stroke {
+    0%   {
+        fill: rgba(125,34,173,0); stroke: rgba(163,38,255,1);
+        stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+    }
+    70%  {fill: rgba(125,34,173,0); stroke: rgba(163,38,255,1); }
+    80%  {fill: rgba(125,34,173,0); stroke: rgba(163,38,255,1); stroke-width: 3; }
+    100% {
+        fill: rgba(125,34,173,1); stroke: rgba(163,38,255,0);
+        stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+    }
+}
+.wrapper {background-color: #121212};
 
 

@@ -9,15 +9,22 @@
 <body>
 
     <nav class="navbar">
-        <img src="vjti.png" alt="Image 1" class="navbar-img-1" >
-        <img src="digitaltext.png" alt="Image 2" class="large-img-2" >
-        <img src="nexus.png" alt="Image 3" class="navbar-img-3" >
-        <img src="digital.png" alt="Image 4" class="navbar-img-4" >
+        <img src="images/vjti.png" alt="Image 1" class="navbar-img-1" >
+        <img src="images/digitaltext.png" alt="Image 2" class="large-img-2" >
+        <img src="images/nexus.png" alt="Image 3" class="navbar-img-3" >
+        <img src="images/digital.png" alt="Image 4" class="navbar-img-4" >
     </nav>
 
     <div class="container">
         <div class="image-container" id="imageContainer" onclick="openLink('page1.html')">
-            <img src="aiml.webp" alt="Image 1" height="370px">
+<!--            <img src="images/aiml.webp" alt="Image 1" height="370px">-->
+            <div class="wrapper">
+                <svg>
+                    <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                        AI/ML
+                    </text>
+                </svg>
+            </div>
             <div class="btn-contain">
               <div class="btn-skew-contain">
                 <a href="aiml.html" class="btn-skew">
@@ -29,7 +36,14 @@
         
         
         <div class="image-container" onclick="openLink('page2.html')">
-            <img src="blockchain.webp" alt="Image 2" height="370px">
+<!--            <img src="images/blockchain.webp" alt="Image 2" height="370px">-->
+            <div class="wrapper">
+                <svg>
+                    <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                        WEB3
+                    </text>
+                </svg>
+            </div>
             <div class="btn-contain">
                 <div class="btn-skew-contain">
                   <a href="blockchain.html" class="btn-skew">
