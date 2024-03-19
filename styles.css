@@ -341,9 +341,15 @@ button {
 }
 
 .slide {
-    --color: #0077b5;
-    --hover: #0077b5;
+  --color: #0077b5;
+  --hover: #0077b5;
 }
+
+
+
+
+
+
 
 button.slide:hover,
 button.slide:focus {
@@ -468,7 +474,7 @@ svg text {
     animation: stroke 5s infinite alternate;
     stroke-width: 2;
     stroke: #A326FF;
-    font-size: 100px;
+    font-size: 70px;
 }
 @keyframes stroke {
     0%   {
@@ -483,5 +489,7 @@ svg text {
     }
 }
 .wrapper {background-color: #121212};
+
+
 
 
