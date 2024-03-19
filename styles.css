@@ -43,7 +43,7 @@ body {
     width: 350px;
     height: 100px;
     margin-top: 20px;
-    margin-right: 40px;
+    margin-right: -35px;
     margin-left: 170px;
 }
 
@@ -70,7 +70,8 @@ body {
 
     .large-img-2 {
         display: block; /* Show image 2 on mobile */
-        width: 80%; /* Adjust width to fit mobile screen */
+        width: 75%; /* Adjust width to fit mobile screen */
+        height: 60%;
         margin: 20px 0; /* Add vertical margin */
     }
 }
